@@ -28,14 +28,26 @@
     grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
     grid-gap: 500px;
     height: 500px;
+    margin-right: 180px;
 }
-
+input{
+    background-color: hsl(0, 6%, 3%);
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    color: hsl(210, 25%, 97%);
+}
 .product-list {
     text-align: center;
     height: 500px; /* You may want to adjust this */
     margin-bottom: 200px;
+    align-items: center;
+    margin-left: 50px;
 }
-
+.btn{
+  background-color: black;
+  border: 1px solid black;
+}
 .product img {
     width: 100%;
     max-height: 700px;
@@ -56,7 +68,7 @@
     color: black;
 }
 button{
-    background-color: black;
+    background-color: rgb(134, 12, 12);
     width: 150px;
     height: 40px;
     color: hsl(0, 22%, 96%);
@@ -85,21 +97,44 @@ button{
     padding: 2px 6px;
     font-size: 8px;
   }
-  .user-icon {
-    cursor: pointer;
-    width: 30px; /* Adjust the size as needed */
-    height: 30px; /* Adjust the size as needed */
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-size: 16px;
+    color: #000;
+}
+  .navbar-nav{
+margin-left: 450px;
   }
-  @media screen and (max-width: 768px) {
-    .nav-links {
-      display: none;
-    }
-  
-    .user-icon {
-      display: block;
-    }
-  
-    .user-icon.active + .nav-links {
-      display: block;
-    }
+
+
+  .badge {
+margin-top: 20px;
+margin-right: 55px;
+border-radius: -5px;
+  }
+
+  .move{
+    margin-right: 55px;
+  }
+
+  .yu
+  {
+    margin-top: 100px;
+    margin-bottom: -40px;
+  }
+
+  a{
+    text-decoration: none;
   }

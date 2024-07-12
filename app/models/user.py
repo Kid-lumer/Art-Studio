@@ -7,8 +7,8 @@ class New:
     
     
     def login(user):
-        user = mongo.db.signup.find_one(user)
-        return list(mongo.db.signup.find_one({}, {'_id', 0}))
+        # user = mongo.db.signup.find_one(user)
+        return mongo.db.signup.find_one(user)
     
 
     

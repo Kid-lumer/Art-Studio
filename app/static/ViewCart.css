@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .profile {
+    max-width: 1400px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: transparent;
+    color: #0c0c0c;
+    margin-top: 20px;
+    
+  }
+  
+  .product img {
+    width: 100%;
+    max-height: 700px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-left: 60px;
+    margin-top: 50px;
+}
+
+  
+  .profile h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .profile p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .logo{
+    height: 600px;
+    width: 60px;
+    float: left;
+    border-radius: 20px;
+    
+  }
+  .table{
+    margin-top: 100px;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    margin-left: 300px;
+    
+  }
+  
+  nav li {
+    float: left;
+  }
+  
+  nav a {
+    display: block;
+
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-left: 900px;
+    
+  }
+
+  button{
+    background-color: black;
+    width: 150px;
+    height: 40px;
+    color: hsl(0, 22%, 96%);
+    border-radius: 10px;
+  }
+  .container{
+    margin-left: 200px;
+    width: 1000px;
+   
+  }
+  .card{
+    margin-left: 50px;
+  }
+
+
+.btn{
+    color: #f8f3f3;
+}
+
+
+  .btnn {
+    margin-top: -5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #0f1113;
+    color: #f8f3f3;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+
+
+/* Disable styles for disabled button */
+button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Align the buttons and quantity */
+form {
+    display: inline-block;
+}
+
+p {
+    margin: 5px 0;
+}
+
+#cartIcon {
+    position: relative;
+
+  }
+  .quantity-selector select {
+    height: 2.5rem;
+    width: 5rem;
+    font-weight: bolder;
+    text-align: center;
+}  
+
+
+  #cartIcon img {
+    width: 300px; /* Adjust the size as needed */
+    height: 30px; /* Adjust the size as needed */
+    vertical-align: middle;
+    margin-top: 5px;
+  }
+  
+  #cartCount {
+    /* position: absolute;
+    top: 5;
+    right: 0; */
+    background-color: red;
+    color: rgb(187, 24, 24);
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 90px;
+    margin-left: 2rem;
+  }
+  .user-icon {
+    cursor: pointer;
+    width: 30px; /* Adjust the size as needed */
+    height: 30px; /* Adjust the size as needed */
+  }
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .user-icon {
+      display: block;
+    }
+  
+    .user-icon.active + .nav-links {
+      display: block;
+    }
+  }
+ 
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style for the delete button */
+.btn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: gray;
+}
