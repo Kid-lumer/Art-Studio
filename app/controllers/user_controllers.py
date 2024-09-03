@@ -20,22 +20,22 @@ def signup():
         role = request.form['role']
         signup_details = {"full_name": full_name, "email": email, "Cell_No": cell_no, "password": password, 'role': role}
 
-        # check if user exists using email
-        existing_user = New.find_by_email(email)
-        if existing_user:
-            flash("Email already exists. Please use a different email.")
-            return render_template('register.html', success=False)
-
-        # Create a new user
-        New.create_user(signup_details)
-        print(signup_details)
-
-       
-        if signup_details:
-            return render_template('register.html', success=True)
+        if New.find_user_by_email(email):
+            print("Already exist")
+            flash('Email or username already exist. Please try again with different credentials.', 'error')
         else:
-            return render_template('register.html', success=False)
+            print("Succesful")
+
+        if not New.create_user(signup_details):
+            flash('Email or username already exist. Please try again with different credentials.', 'error')
+            #Redirect to register page
+            return render_template('register.html',  success=True)
+        #Redirect to register page without error message 
+        return render_template('register.html',  success=True)
+
+        
     return render_template('register.html'), 200
+
 #Login
 def buyer_login():
     if request.method == 'POST':
@@ -43,15 +43,16 @@ def buyer_login():
         password = request.form['signin_password']
         role = request.form['role']
         
-        user = {'email': email, 'password': password, 'role': role}
-        New.login(user)
-   
-   
-    return render_template("profile.html")
+        known_user = New.find_user_by_email_and_password(email, password)
 
-
-def getItems():
-    items = Products.create_item()
-    cart_count = len(session.get('cart', []))
-    return render_template("profile.html", item=items, cart_count=cart_count)
+        if known_user:
+            session['user_id'] = str(known_user['_id'])
+            session['role'] = role
+            if role == 'artist':
+                items = Products.find_items()
+                return render_template("profile.html", items = items)
+            else:
+                return render_template("catalog.html",)
+           
+    return render_template("register.html")
 

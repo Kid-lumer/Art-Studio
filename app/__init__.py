@@ -13,8 +13,11 @@ def create_app():
     with app.app_context():
         from .routes import user_routes
         from .routes import items_routes
+        from .routes import cart_routes
 
         app.register_blueprint(user_routes.app)
         app.register_blueprint(items_routes.app)
+        app.register_blueprint(cart_routes.app)
+
         
     return app

@@ -73,7 +73,7 @@
                     <td>{{ item.Name }}</td>
                     <td id="item-price-{{ item.id }}">R{{ item.Amount }}</td>
                     <td>
-                        <form method="POST" action="{{ url_for('remove_from_cart') }}">
+                        <form method="POST" action="{{ url_for('cart_bp.remove_from_cart') }}">
                             <input type="hidden" name="selected_items" value="{{ item.id }}">
                             <button type="button" class="btn btn-danger" onclick="showRemoveModal(this)">Remove</button>                        </form>
                     </td>

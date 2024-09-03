@@ -59,7 +59,7 @@
                 <td>{{Description}}</td>
             </tr>
         </table>
-        <form method="POST" action="{{ url_for('add_to_cart') }}">
+        <form method="GET" action="/AddToCart">
             <input type="hidden" name="id" value="{{ id }}">
             <input type="hidden" name="Name" value="{{ Name }}">
             <input type="hidden" name="Amount" value="{{ Amount }}">
